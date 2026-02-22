@@ -55,9 +55,9 @@ ul {
   border-bottom: 1px solid #e7e9fc;
   z-index: 999;
   box-shadow:
-    0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16),
-    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    0 2px 1px rgba(46, 47, 66, 0.08),
+    0 1px 1px rgba(46, 47, 66, 0.16),
+    0 1px 6px rgba(46, 47, 66, 0.08);
 }
 .header-page .container {
   display: flex;
@@ -75,6 +75,9 @@ ul {
 .nav-header .nav-menu {
   display: flex;
   gap: 40px;
+}
+.link active {
+  color: #404bbf;
 }
 .nav-header {
   margin-left: 76px;
@@ -232,7 +235,7 @@ ul {
 }
 .social-link:hover,
 .social-link:focus {
-  background-color: #31d0aa;
+  background-color: #404bbf;
 }
 .team-title {
   font-size: 36px;
@@ -365,6 +368,7 @@ ul {
   display: flex;
   flex-direction: row;
   gap: 120px;
+  align-items: baseline;
 }
 .footer-page {
   background-color: #2e2f42;
@@ -407,11 +411,25 @@ ul {
   width: 208px;
   align-items: flex-start;
 }
-.footer-icon {
+.footer-social-list {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
+}
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: #31d0aa;
 }
 .accent-logo {
   color: #4d5ae5;
@@ -440,6 +458,9 @@ ul {
   color: #404bbf;
 }
 .link:focus::after {
+  opacity: 1;
+}
+.link.active::after {
   opacity: 1;
 }
 .button-order:hover {
