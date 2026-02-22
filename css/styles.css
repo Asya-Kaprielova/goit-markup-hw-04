@@ -76,7 +76,7 @@ ul {
   display: flex;
   gap: 40px;
 }
-.link active {
+.link.active {
   color: #404bbf;
 }
 .nav-header {
@@ -416,6 +416,9 @@ ul {
   align-items: center;
   justify-content: center;
   gap: 16px;
+}
+.footer-social-link .icon {
+  fill: #f4f4fd;
 }
 .footer-social-link {
   display: flex;
