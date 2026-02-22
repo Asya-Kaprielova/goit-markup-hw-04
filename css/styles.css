@@ -49,13 +49,15 @@ ul {
   padding-bottom: 120px;
 }
 .header-page {
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  width: 100%;
   background-color: #ffffff;
   border-bottom: 1px solid #e7e9fc;
   z-index: 999;
+  box-shadow:
+    0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16),
+    0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 .header-page .container {
   display: flex;
@@ -112,6 +114,8 @@ ul {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 .intro .container {
   display: flex;
@@ -140,12 +144,10 @@ ul {
   padding: 16px 32px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .features .container {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 24px;
 }
 .visually-hidden {
   position: absolute;
@@ -209,6 +211,28 @@ ul {
   display: flex;
   gap: 24px;
   flex-direction: row;
+}
+.social-list {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+}
+.social-link .icon {
+  fill: #f4f4fd;
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: #31d0aa;
 }
 .team-title {
   font-size: 36px;
@@ -275,11 +299,11 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-card {
   display: flex;
   flex-direction: column;
-  width: 360px;
   background-color: #ffffff;
   border-radius: 0 0 4px 4px;
   padding: 32px 16px;
@@ -426,6 +450,7 @@ ul {
 }
 .link-contacts {
   color: #434455;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-contacts:hover {
   color: #404bbf;
@@ -436,4 +461,5 @@ ul {
 .link {
   position: relative;
   padding: 24px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
